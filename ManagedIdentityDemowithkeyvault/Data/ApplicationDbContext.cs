@@ -14,6 +14,7 @@ namespace ManagedIdentityDemowithkeyvault.Data
         {
             if (!isInitialized)
             {
+                isInitialized = true;
                 var credential = new DefaultAzureCredential(new DefaultAzureCredentialOptions());
 
                 var azureKeyVaultProvider = new SqlColumnEncryptionAzureKeyVaultProvider(credential);
