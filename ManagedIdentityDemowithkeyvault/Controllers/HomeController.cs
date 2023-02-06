@@ -19,6 +19,13 @@ namespace ManagedIdentityDemowithkeyvault.Controllers
 
             return Ok(obj);
         }
+        [HttpPost("postvalue")]
+        public IActionResult postvalue(profile _profile)
+        {
+            _db.profile.Add(_profile);
+            _db.SaveChanges();
+            return Ok(_profile);
+        }
         [HttpGet("service")]
         public IActionResult service()
         {
